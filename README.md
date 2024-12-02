@@ -4,7 +4,7 @@
             Designed to help you stay organized, it allows you to seamlessly create, edit, delete, and search through your notes. 
             With an intuitive interface and robust functionality, this app ensures that managing your ideas, tasks, or reminders becomes effortless.
         </p>
-        <p><strong>Live Demo:</strong> <a href="" target="_blank">WriteUp</a></p>
+        <p><strong>Live Demo:</strong> <a href="https://write-up-ten.vercel.app/" target="_blank">WriteUp</a></p>
     </header>
     <section>
         <h2>Features</h2>
