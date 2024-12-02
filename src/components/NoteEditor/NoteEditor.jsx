@@ -89,7 +89,7 @@ const NoteEditor = (props) => {
                     </div>
                     {!isMobile && 
                         <Button onClick={preventDefaultAndExecute(editor.saveNote)} >
-                            Close
+                            Save
                         </Button>
                     }
                 </div>
