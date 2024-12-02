@@ -1,0 +1,111 @@
+@use "../../styles/abstracts/breakpoints" as *;
+
+.сolorPicker {
+    position: absolute;
+    z-index: 12;
+    top: 90px;
+    left: 40px;
+
+    padding: 8px 0;
+
+    background: #202124;
+    border-radius: 10px;
+    
+    @media (min-width: $sm) {
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.6),0 2px 6px 2px rgba(0,0,0,0.302);
+        transform: translate(-50%, -7px);
+    }
+    @media (max-width: $sm) {
+        right: 0;
+
+        padding: 20px 0;
+
+        box-shadow: 0 -2px 5px rgba(0,0,0,.2);
+        border-radius: 10px 10px 0 0;
+
+        transition: background 0.3s;
+    }
+
+
+    $color-width: 32px;
+    $colors-gap: 4px;
+    $colors-in-row: 6;
+    $colors-padding: 9px;
+
+    $color-width-sm: 48px;
+    $colors-gap-sm: 8px;
+    $colors-padding-sm: 15px;
+
+    .colors {
+        display: flex;
+        gap: $colors-gap;
+
+        padding: 0 $colors-padding;
+
+        @media (max-width: $sm) {
+            gap: $colors-gap-sm;
+
+            padding: 0 $colors-padding-sm;
+
+            overflow-x: auto;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &.two-rows {
+            flex-wrap: wrap;
+            width: ($color-width * $colors-in-row + ($colors-in-row - 1) * $colors-gap + $colors-padding * 2);
+        }
+    }
+
+    .color {
+        flex-shrink: 0;
+
+        width: $color-width;
+        height: $color-width;
+
+        border-radius: 50%;
+        border: 2px solid transparent;
+
+        @media (min-width: $sm) {
+            &:first-child {
+                border-color: #5f6368;
+            }
+        }
+
+        @media (max-width: $sm) {
+            width: $color-width-sm;
+            height: $color-width-sm;
+
+            border: 1px solid #949ba3;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                border-color: rgba(255,255,255,.87);
+            }
+        }
+        
+        &:active {
+            border-color: rgba(255,255,255,.87);
+        }
+
+        &.active {
+            border-color: #a142f4;
+            border-width: 2px;
+        }
+    }
+
+    p {
+        padding: 0 $colors-padding;
+        margin-bottom: 16px;
+
+        color: rgba(255, 255, 255, 0.87);
+
+        @media (max-width: $sm) {
+            padding: 0 $colors-padding-sm;
+        }
+    }
+}

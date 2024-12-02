@@ -1,0 +1,31 @@
+@use "../../styles/abstracts/breakpoints" as *;
+
+.noteList {
+    margin-top: 35px;
+
+    @media (max-width: $sm) {
+        margin-top: 0;
+    }
+
+    .empty {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        height: 100%;
+        
+        margin-top: 24vh;
+
+        img {
+            width: 120px;
+            height: 120px;
+        }
+
+        p {
+            color: #5f6164;
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+}

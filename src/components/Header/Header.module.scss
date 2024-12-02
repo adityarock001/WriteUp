@@ -1,0 +1,23 @@
+@use "../../styles/abstracts/breakpoints" as *;
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    height: 60px;
+
+    border-bottom: 1px solid #5F6368;
+
+    @media (max-width: $lg) {
+         gap: 40px;
+    }
+    @media (max-width: $md) {
+         gap: 30px;
+    }
+    @media (max-width: $sm) {
+         gap: 20px;
+    }
+}

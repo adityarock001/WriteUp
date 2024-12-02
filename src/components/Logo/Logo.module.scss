@@ -1,0 +1,25 @@
+@use "../../styles/abstracts/breakpoints" as *;
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: rgba(255,255,255,.87);
+    font-size: 24px;
+
+    @media (max-width: $sm) {
+        gap: 6px;
+
+        font-size: 19px;
+    }
+
+    img {
+        width: 35px;
+
+        @media (max-width: $sm) {
+            width: 30px;
+        }
+    }
+}

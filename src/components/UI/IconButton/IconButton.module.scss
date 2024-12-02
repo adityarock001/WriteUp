@@ -1,0 +1,53 @@
+@use "../../../styles/abstracts/breakpoints" as *;
+
+.iconButton {
+    $btn-size: 32px;
+    $btn-size-sm: 38px;
+
+    width: $btn-size;
+    height: $btn-size;
+
+    background: transparent;
+    border-radius: 50%;
+
+    @media (hover: hover) {
+        &:hover {
+            background: rgba(154,160,166,0.157);
+        }
+    }
+
+    @media (max-width: $sm) {
+        width: $btn-size-sm;
+        height: $btn-size-sm;
+    }
+
+    img {
+        object-fit: contain;
+
+        &.trash {
+            $size: 17px;
+            $size-sm: 21px;
+
+            width: $size;
+            height: $size;
+
+            @media (max-width: $sm) {
+                width: $size-sm;
+                height: $size-sm;
+            }
+        }
+
+        &.color {
+            $size: 19px;
+            $size-sm: 23px;
+
+            width: $size;
+            height: $size;
+
+            @media (max-width: $sm) {
+                width: $size-sm;
+                height: $size-sm;
+            }
+        }
+    }
+}

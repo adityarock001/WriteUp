@@ -1,0 +1,36 @@
+@use "../abstracts/breakpoints" as *;
+
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+    background: #202124;
+    
+    font-family: "Roboto", sans-serif;
+
+    &.modal-open {
+        overflow: hidden;
+    }
+}
+
+
+.container {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @media (max-width: $lg) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media (max-width: $md) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media (max-width: $sm) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
